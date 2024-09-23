@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. 圖片相關</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        @media screen and (max-width: 768px){
+            .table-rwd thead{
+                display: none;
+            }
+            .table-rwd tbody tr{
+                display: block;
+                margin-top: 10px;
+                border: 5px solid var(--mycolor11);
+            }
+            .table-rwd tbody tr td{
+                display: block;
+                overflow: hidden;
+            }
+            .table-rwd tbody tr td::before{
+                content: attr(data-th)" : ";
+                color: var(--mycolor09);
+                font-size: 20px;
+                font-weight: 900;
+                display: block;
+                float: left;
+                width: 30%;
+                text-align: right;
+                padding-right: 15px;
+            }
+            .table-rwd tbody tr td span{
+                display: block;
+                float: left;
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-bordered table-sm table-rwd">
+            <caption class="text-end">產品列表</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th>產品編號</th>
+                    <th>產品名稱</th>
+                    <th>產品數量</th>
+                    <th>產品單價</th>
+                    <th>產品備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="產品編號"><span>001</span></td>
+                    <td data-th="產品名稱"><span>美式咖啡</span></td>
+                    <td data-th="產品數量"><span>10</span></td>
+                    <td data-th="產品單價"><span>60</span></td>
+                    <td data-th="產品備註"><span>石油還有團結最重要，你還這款研究，常用電信理想應用民主測試西安為何貼布夥伴也有執法，經濟發展，新增。</span></td>
+                </tr>
+                <tr>
+                    <td data-th="產品編號">002</td>
+                    <td>拿鐵咖啡</td>
+                    <td>10</td>
+                    <td>60</td>
+                    <td>很好喝</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>紅茶</td>
+                    <td>10</td>
+                    <td>60</td>
+                    <td>很好喝</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>紅茶</td>
+                    <td>10</td>
+                    <td>60</td>
+                    <td>很好喝</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>紅茶</td>
+                    <td>10</td>
+                    <td>60</td>
+                    <td>很好喝</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>紅茶</td>
+                    <td>10</td>
+                    <td>60</td>
+                    <td>很好喝</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
