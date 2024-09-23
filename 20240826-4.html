@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6. bootstrap 欄與列</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            border: 6px solid var(--mycolor05);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box bg-secondary">
+            <div class="h1">01</div>
+        </div>
+        <div class="box bg-success d-sm-none d-xxl-block">
+            <div class="h1">02</div>
+        </div>
+        <div class="box bg-primary d-md-none d-xl-block">
+            <div class="h1">03</div>
+        </div>
+        <div class="box bg-info d-lg-none d-xl-block">
+            <div class="h1">04</div>
+        </div>
+        <div class="box bg-warning d-xl-none d-xxl-block">
+            <div class="h1">05</div>
+        </div>
+        <div class="box bg-danger d-xxl-none">
+            <div class="h1">06</div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

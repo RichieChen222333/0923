@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch6 排版練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box01{
+            height: 150px;
+            margin-top: 20px;
+        }
+        .box01 .display-1{
+            line-height: 150px;
+        }
+        @media screen and (min-width: 1100px){
+            .row_02 .box01{
+                width: 150px;
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media screen and (min-width: 1250px){
+            .row_03 .box01{
+                transform: rotate(5deg);
+                transition: transform 2s;
+            }
+            .row_03 .box01:hover{
+                transform: rotate(0deg);
+                transition: transform 0.5s;
+                background-color: var(--mycolor07);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-md-none d-lg-block col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
+                <div class="box01 bg-color01">
+                    <div class="display-1 fw-900 text-center">Header</div>
+                </div>
+            </div>
+        </div>
+        <div class="row row_02">
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">01</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">02</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">03</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">04</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">05</div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2">
+                <div class="box01 bg-color02">
+                    <div class="display-1 fw-900 text-center">06</div>
+                </div>
+            </div>
+        </div>
+        <div class="row row_03">
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">01</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">02</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">03</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">04</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">05</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">06</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">07</div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="box01 display-1 fw-900 text-center bg-color03">08</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-none d-md-block">
+                <div class="box01 bg-color04">
+                    <div class="display-1 fw-900 text-center">Footer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        @media screen and (max-width: 768px){
+            body{
+                background-color: var(--mycolor10);
+            }
+            .table-rwd thead{
+                display: none;
+            }
+            .table-rwd tbody tr{
+                display: block;
+                border: 3px solid var(--mycolor07);
+                margin-top: 15px;
+            }
+            .table-rwd tbody tr td{
+                display: block;
+                overflow: hidden;
+            }
+            .table-rwd tbody tr td::before{
+                content: attr(data-th)" : ";
+                font-weight: 900;
+                font-size: 20px;
+                color: var(--mycolor05);
+                display: block;
+                float: left;
+                width: 30%;
+                text-align: right;
+                padding-right: 20px;
+            }
+            .table-rwd tbody tr td span{
+                display: block;
+                float: left;
+                width: 70%;
+            }
+
+            .table-rwd tbody tr:hover{
+                border: 6px solid var(--mycolor03);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered table-rwd">
+            <thead class="table-dark">
+                <tr>
+                    <th width="5%">編號</th>
+                    <th width="20%">商品圖片</th>
+                    <th width="15%">商品名稱</th>
+                    <th width="15%">商品數量</th>
+                    <th width="15%">商品價格</th>
+                    <th width="30%">商品說明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-th="編號"><span>001</span></td>
+                    <td data-th="商品圖片">
+                        <span><img src="images/cake01.avif" class="img-fluid" alt=""></span>
+                    </td>
+                    <td data-th="商品名稱"><span>蛋糕001</span></td>
+                    <td data-th="商品數量"><span>99</span></td>
+                    <td data-th="商品價格"><span>60</span></td>
+                    <td data-th="商品說明"><span>顧問各類戰爭工具交友什麼樣對他是一種身體音樂，事件趨勢保護大力變成位置填寫方向，目的筆者，廣場實在。</span></td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>
+                        <img src="images/cake02.avif" class="img-fluid" alt="">
+                    </td>
+                    <td>蛋糕002</td>
+                    <td>99</td>
+                    <td>60</td>
+                    <td>顧問各類戰爭工具交友什麼樣對他是一種身體音樂，事件趨勢保護大力變成位置填寫方向，目的筆者，廣場實在。</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>
+                        <img src="images/cake03.avif" class="img-fluid" alt="">
+                    </td>
+                    <td>蛋糕003</td>
+                    <td>99</td>
+                    <td>60</td>
+                    <td>顧問各類戰爭工具交友什麼樣對他是一種身體音樂，事件趨勢保護大力變成位置填寫方向，目的筆者，廣場實在。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

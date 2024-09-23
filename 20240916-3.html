@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 程式練習(jQuery)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-5" id="mydata">
+                <div class="h1 fw-900">XXXXXX</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        //主程式
+        $(function () {
+            //迴圈
+            // for (var i = 0; i < 9; i++) {
+            //     if (i > 4) {
+            //         console.log(i + " : " + "hello world!");
+            //     }
+            // }
+
+            //串(介)接資料
+            $.ajax({
+                type: "GET",
+                url: "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193",
+                dataType: "json",
+                success: showdata,
+                error: function () {
+                    console.log("連線失敗!");
+                }
+            });
+        });
+
+        function showdata(data) {
+            console.log(data);
+            for(var i=0; i<10; i++){
+                console.log(data[i].Name);
+                $("#mydata").append('<div class="h1 fw-900">'+ data[i].Name +'</div>');
+            }
+        }
+    </script>
+</body>
+
+</html>
